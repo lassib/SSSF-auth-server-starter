@@ -119,7 +119,7 @@ const userPut = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-const userPutAdmin = async (
+const userPutAsAdmin = async (
   req: Request,
   res: Response,
   next: NextFunction
@@ -241,7 +241,7 @@ export {
   userGet,
   userPost,
   userPut,
-  userPutAdmin,
+  userPutAsAdmin,
   userDelete,
   userDeleteAsAdmin,
   checkToken,

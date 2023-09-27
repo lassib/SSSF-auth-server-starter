@@ -7,6 +7,8 @@ import {
   userListGet,
   userPost,
   userPut,
+  userDeleteAsAdmin,
+  userPutAsAdmin,
 } from '../controllers/userController';
 import {authenticate} from '../../middlewares';
 
@@ -23,6 +25,10 @@ router.get('/token', authenticate, checkToken);
 
 router.route('/check').get(check);
 
-router.route('/:id').get(userGet);
+router
+  .route('/:id')
+  .get(userGet)
+  .delete(authenticate, userDeleteAsAdmin)
+  .put(authenticate, userPutAsAdmin);
 
 export default router;
