@@ -186,7 +186,7 @@ const userDelete = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-const userDeleteAdmin = async (
+const userDeleteAsAdmin = async (
   req: Request,
   res: Response,
   next: NextFunction
@@ -243,6 +243,6 @@ export {
   userPut,
   userPutAdmin,
   userDelete,
-  userDeleteAdmin,
+  userDeleteAsAdmin,
   checkToken,
 };
